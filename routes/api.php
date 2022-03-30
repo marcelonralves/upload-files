@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('users', 'Api\\UserController@index');
-Route::put('users', 'Api\\UserController@index');
-Route::post('users', 'Api\\UserController@index');
+Route::get('users', 'Api\\UserController@showUsers');
+Route::post('users', 'Api\\UserController@createUser');
+Route::get('user/{id}', 'Api\\UserController@showUser');
+Route::put('users/{id}', 'Api\\UserController@editUser');
+Route::delete('user/{id}', 'Api\\UserController@deleteUser');
